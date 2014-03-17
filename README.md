@@ -3,6 +3,7 @@
 
 *Created by Chris Grandin2, February 2014*
 
+Hello World!
 git-workshop is a repository for learning how to use git version control.
 Also included are examples for using *Latex* and the R package *knitr* to apply version control to documents
 which are to be edited by more than one person, working collaboratively.
@@ -47,6 +48,7 @@ Type the following to clone your repository onto your local machine:
       git status                        <View changes & staging>
       gitk                              <GUI - show revision tree information>
       git gui                           <GUI - show revisions, merge branches>
+      git mergetool                     <GUI - merge helper. DiffMerge from sourcegear is a good one>
       git remote -v                     <Look at all remote data sources (URLs)>
       git remote add NAME URL           <Add the remote reposiroty at URL, and give it the name NAME>
       git fetch NAME                    <Fetch the commits from the repository denoted by NAME>
@@ -63,7 +65,7 @@ Type the following to clone your repository onto your local machine:
       git log branchA ^branchB          <show log of commits in branchA but not in branchB>
       git log master ^origin/master     <Show difference between local master and origin/master (latest copy of remote)>
       git push origin --delete NAME     <Delete the branch NAME from the remote>
-      git reset HEAD~N                  <Move back N commits, keeping changes from last N-1 commits>
+      git reset --soft HEAD~N           <Undo commits safely. Move back N commits, keeping changes from last N-1 commits>
       git reset --hard HEAD~N           <Move back N commits, destroying changes made in latest N-1 commits>
       git log --diff-filter=D --summary <Shows all commits in which files were deleted>
 
